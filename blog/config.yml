@@ -1,7 +1,7 @@
 baseURL: https://adityatelange.github.io/hugo-index/
 languageCode: en-us
 title: Index
-theme: ../../
+theme: hugo-index
 pygmentsUseClasses: true
 enableInlineShortcodes: true
 # Copyright: © hugo-index authors | [Privacy Policy](#)
