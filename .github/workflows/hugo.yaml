@@ -6,7 +6,8 @@ on:
   push:
     branches:
       - main
-
+    paths:
+      - "blog/**"
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -57,13 +58,14 @@ jobs:
           TZ: America/Los_Angeles
         run: |
           hugo \
+            --source blog \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./blog/public
 
   # Deployment job
   deploy:
